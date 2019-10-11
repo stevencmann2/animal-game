@@ -27,14 +27,35 @@ $(".playerscore").text(playerScore);
 $(".wins").text(wins);
 $(".losses").text(losses);
 
-// Declaring on click events for the icons //
+//assigning the animal variables to icons//
 $(".horse").on("click", function() {
+    $(".playerscore").text(horse);
+
+});
+
+  $(".dog").on("click", function() {
+    $(".playerscore").text(dog);
+});
+  $(".bird").on("click", function() {
+    $(".playerscore").text(bird);
+});
+  $(".frog").on("click", function() {
+    $(".playerscore").text(frog);
+
+});
+
+
+
+
+
+// Declaring on click events for the icons //
+/*$(".horse").on("click", function() {
     alert("you clicked the horse");
-  });
+  }); 
 
   $(".dog").on("click", function() {
     alert("you clicked the dog");
-  });
+ 
 
   $(".bird").on("click", function() {
     alert("you clicked the bird");
@@ -45,9 +66,5 @@ $(".horse").on("click", function() {
   });
 
   
-
-
-
-
-
+*/
 
