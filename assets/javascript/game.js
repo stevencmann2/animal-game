@@ -1,11 +1,17 @@
 //This is my JavaScript file linked with my Animal Game//
 
 // Declaring Variables//
-let wins= 0;
+let wins = 0;
 let losses = 0;
 let playerScore = 0;
-// const for random target # generator
+ 
+// variables for icon value generator
+let horse = Math.floor(Math.random() * (13 - 1)) + 1;
+let dog  = Math.floor(Math.random() * (13 - 1)) + 1;
+let bird = Math.floor(Math.random() * (13 - 1)) + 1;
+let frog = Math.floor(Math.random() * (13 - 1)) + 1;
 
+console.log (horse, dog, bird, frog);
 
 // this is a variable for the target score value generator //
 let targetScore = Math.floor(Math.random() * (121 - 19)) + 19; //The maximum is exclusive and the minimum is inclusive
