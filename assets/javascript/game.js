@@ -3,7 +3,7 @@
 // Declaring Variables//
 let wins = 0;
 let losses = 0;
-let playerScore = [0];
+let playerScore = 0;
 
 
 
@@ -49,6 +49,7 @@ $(".horse").on("click", function() {
     $(".playerscore").text(frog);
 
 });
+console.log(typeof playerScore);
 /*
 // making a sum function of the icon values//
 function sumNumbers(playerScore) {
@@ -65,25 +66,40 @@ console.log(playerScore);
 // Loop where the the score increase 
 
 $(".horse").on("click", function() {
+    let playerSum = playerScore += horse;
+    $(".playerscore").text(playerSum);
     // need to make a new total to keep track of function? new variable? 
-    playerScore.push(horse); //pushes horse into playerScore object, now part of objectplayerScore 
+   // playerScore.push(horse); //pushes horse into playerScore object, now part of objectplayerScore 
   // $(".playerscore").text(sumNumbers(playerScore)); // prints function to the document 
 });
-console.log(playerScore);
 
 
+$(".dog").on("click", function() {
+    let playerSum = playerScore += dog;
+    $(".playerscore").text(playerSum);
+});
 
-/*
+$(".bird").on("click", function() {
+    let playerSum = playerScore += bird;
+    $(".playerscore").text(playerSum);
+});
+
+$(".frog").on("click", function() {
+    let playerSum = playerScore += frog;
+    $(".playerscore").text(playerSum);
+});
+
 
 // condition for win/loss//
-if (playerScore === targetScore){
+if ((playerSum === targetScore)){
     wins++;
-}
-else (targetscore < playerScore) {
+    alert("did this work, you win");
+} else ((playerSum > targetScore)) {
     losses++;
-}
+    alert("you lost the game");
+)};
 
-*/
+
 
 
 
