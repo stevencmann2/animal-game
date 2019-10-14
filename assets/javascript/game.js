@@ -35,13 +35,14 @@ let playerSum = 0;
 
 //THis will be my restart gfame function//
 function restart() {
-  let playerSum = 0;
-  let playerScore = 0;
-  let horse = Math.floor(Math.random() * (13 - 1)) + 1;
-  let dog  = Math.floor(Math.random() * (13 - 1)) + 1;
-  let bird = Math.floor(Math.random() * (13 - 1)) + 1;
-  let frog = Math.floor(Math.random() * (13 - 1)) + 1;
-  let targetScore = Math.floor(Math.random() * (121 - 19)) + 19;
+  targetScore = Math.floor(Math.random() * (121 - 19)) + 19;
+  playerSum = 0;
+  playerScore = 0;
+  horse = Math.floor(Math.random() * (13 - 1)) + 1;
+  dog  = Math.floor(Math.random() * (13 - 1)) + 1;
+  bird = Math.floor(Math.random() * (13 - 1)) + 1;
+  frog = Math.floor(Math.random() * (13 - 1)) + 1;
+  
 };
 
 
