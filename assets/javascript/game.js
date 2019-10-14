@@ -5,9 +5,11 @@ let wins = 0;
 let losses = 0;
 let playerScore = 0;
 
+//playerSum to be declared later is an event that shows the current player score after a click//
+
 // this is a variable for the target score value generator //
 let targetScore = Math.floor(Math.random() * (121 - 19)) + 19; //The maximum is exclusive and the minimum is inclusive
-console.log(targetScore);
+
  
 // variables for icon value generator//
 let horse = Math.floor(Math.random() * (13 - 1)) + 1;
@@ -28,21 +30,22 @@ $(".playerscore").text(playerScore);
 $(".targetscore").text(targetScore);
 
 
-
 // Loop where the the score increase 
-//platerSum will be a new variable defining the current sum after a click event 
+//playerSum will be a new variable defining the current sum after a click event 
 let playerSum = 0;
 
 //THis will be my restart gfame function//
 function restart() {
+
   targetScore = Math.floor(Math.random() * (121 - 19)) + 19;
+  $(".targetscore").text(targetScore);
   playerSum = 0;
   playerScore = 0;
+  $(".playerscore").text(playerScore);
   horse = Math.floor(Math.random() * (13 - 1)) + 1;
   dog  = Math.floor(Math.random() * (13 - 1)) + 1;
   bird = Math.floor(Math.random() * (13 - 1)) + 1;
   frog = Math.floor(Math.random() * (13 - 1)) + 1;
-  
 };
 
 
