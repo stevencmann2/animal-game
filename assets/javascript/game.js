@@ -33,11 +33,24 @@ $(".targetscore").text(targetScore);
 //platerSum will be a new variable defining the current sum after a click event 
 let playerSum = 0;
 
+//THis will be my restart gfame function//
+function restart() {
+  let playerSum = 0;
+  let playerScore = 0;
+  let horse = Math.floor(Math.random() * (13 - 1)) + 1;
+  let dog  = Math.floor(Math.random() * (13 - 1)) + 1;
+  let bird = Math.floor(Math.random() * (13 - 1)) + 1;
+  let frog = Math.floor(Math.random() * (13 - 1)) + 1;
+  let targetScore = Math.floor(Math.random() * (121 - 19)) + 19;
+};
+
 
 //assigning the animal variables to icons with an onclick event//
 //also sums the click event into the total (playerSum)//
 //prints the new value to player score //
 
+
+// Horse click icon//
 $(".horse").on("click", function() {
     playerSum = playerScore += horse;
     $(".playerscore").text(playerSum);
@@ -45,17 +58,20 @@ $(".horse").on("click", function() {
       wins++;
       alert("Thats one win! lets try that again");
       $(".wins").text(wins);
-      $()
+      
+      restart();
     }
       else if ((playerSum > targetScore)) {
         losses++;
         alert("you lost the game");
         $(".losses").text(losses);
+
+       restart();
         
   } 
 });
 
-
+//Dog click icon
 $(".dog").on("click", function() {
     playerSum = playerScore += dog;
     $(".playerscore").text(playerSum);
@@ -63,15 +79,20 @@ $(".dog").on("click", function() {
       wins++;
       alert("Thats one win! lets try that again");
       $(".wins").text(wins);
+
+      restart();
     }
     else if ((playerSum > targetScore)) {
       losses++;
       alert("you lost the game");
       $(".losses").text(losses);
+
+      restart();
       
 } 
 });
 
+//Bird click Icon//
 $(".bird").on("click", function() {
     playerSum = playerScore += bird;
     $(".playerscore").text(playerSum);
@@ -79,15 +100,20 @@ $(".bird").on("click", function() {
       wins++;
       alert("Thats one win! lets try that again");
       $(".wins").text(wins);
+
+      restart();
     }
     else if ((playerSum > targetScore)) {
       losses++;
       alert("you lost the game");
       $(".losses").text(losses);
+
+      restart();
       
 } 
 });
 
+//Frog click icon//
 $(".frog").on("click", function() {
     playerSum = playerScore += frog;
     $(".playerscore").text(playerSum);
@@ -95,58 +121,15 @@ $(".frog").on("click", function() {
       wins++;
       alert("Thats one win! lets try that again");
       $(".wins").text(wins);
+
+      restart();
     }
     else if ((playerSum > targetScore)) {
       losses++;
       alert("you lost the game");
       $(".losses").text(losses);
+
+    restart();
       
 } 
 });
-console.log(typeof playerSum);
-
-// condition for win/loss//
-// SCOPE ISSUE! ONLY CHECKING AT THE START OF THE RUN, make into a function and check whenever clicked
-// or make a loop 
-//use a prompt to restart? by setting value to zero 
-
-
-
-/*
-
-else ((playerSum > targetScore)) {
-    losses++;
-    alert("you lost the game");
-)};
-
-*/
-
-
-
-
-
-
-
-
-
-
-// Declaring on click events for the icons //
-/*$(".horse").on("click", function() {
-    alert("you clicked the horse");
-  }); 
-
-  $(".dog").on("click", function() {
-    alert("you clicked the dog");
- 
-
-  $(".bird").on("click", function() {
-    alert("you clicked the bird");
-  });
-
-  $(".frog").on("click", function() {
-    alert("you clicked the frog");
-  });
-
-  
-*/
-
