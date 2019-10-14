@@ -43,6 +43,7 @@ function restart() {
 };
 
 //assigning the animal variables to icons with an onclick event//
+//Each click will be checked by the same function to see if the player score is a win or loss//
 
 // Horse click icon//
 $(".horse").on("click", function() {
