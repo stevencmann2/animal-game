@@ -41,34 +41,75 @@ let playerSum = 0;
 $(".horse").on("click", function() {
     playerSum = playerScore += horse;
     $(".playerscore").text(playerSum);
+    if ((playerSum === targetScore)){
+      wins++;
+      alert("Thats one win! lets try that again");
+      $(".wins").text(wins);
+      $()
+    }
+      else if ((playerSum > targetScore)) {
+        losses++;
+        alert("you lost the game");
+        $(".losses").text(losses);
+        
+  } 
 });
 
 
 $(".dog").on("click", function() {
     playerSum = playerScore += dog;
     $(".playerscore").text(playerSum);
+    if ((playerSum === targetScore)){
+      wins++;
+      alert("Thats one win! lets try that again");
+      $(".wins").text(wins);
+    }
+    else if ((playerSum > targetScore)) {
+      losses++;
+      alert("you lost the game");
+      $(".losses").text(losses);
+      
+} 
 });
 
 $(".bird").on("click", function() {
     playerSum = playerScore += bird;
     $(".playerscore").text(playerSum);
+    if ((playerSum === targetScore)){
+      wins++;
+      alert("Thats one win! lets try that again");
+      $(".wins").text(wins);
+    }
+    else if ((playerSum > targetScore)) {
+      losses++;
+      alert("you lost the game");
+      $(".losses").text(losses);
+      
+} 
 });
 
 $(".frog").on("click", function() {
     playerSum = playerScore += frog;
     $(".playerscore").text(playerSum);
+    if ((playerSum === targetScore)){
+      wins++;
+      alert("Thats one win! lets try that again");
+      $(".wins").text(wins);
+    }
+    else if ((playerSum > targetScore)) {
+      losses++;
+      alert("you lost the game");
+      $(".losses").text(losses);
+      
+} 
 });
-
 console.log(typeof playerSum);
 
 // condition for win/loss//
 // SCOPE ISSUE! ONLY CHECKING AT THE START OF THE RUN, make into a function and check whenever clicked
 // or make a loop 
 //use a prompt to restart? by setting value to zero 
-if ((playerSum === targetScore)){
-    wins++;
-    alert("did this work, you win");
-} 
+
 
 
 /*
