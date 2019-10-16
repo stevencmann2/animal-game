@@ -1,11 +1,12 @@
 //This is my JavaScript file linked with my Animal Game//
-
+//first we need to include the document.ready fcuntion upon pagel oad//
+$(document).ready(function(){
 // Declaring Variables//
 let wins = 0;
 let losses = 0;
 let playerScore = 0;
 let playerSum = 0;
-//playerSum will be a new variable defining the current sum after a click event 
+//playerSum will be a new variable defining the current player score after a click event  
 
 // this is a variable for the target score value generator //
 let targetScore = Math.floor(Math.random() * (121 - 19)) + 19; //The maximum is exclusive and the minimum is inclusive
@@ -16,19 +17,18 @@ let dog  = Math.floor(Math.random() * (13 - 1)) + 1;
 let bird = Math.floor(Math.random() * (13 - 1)) + 1;
 let frog = Math.floor(Math.random() * (13 - 1)) + 1;
 
-console.log (horse, dog, bird, frog);
+//console.log (horse, dog, bird, frog)//
+//the above logs to make sure random values are obtained for animal icons//
 
-// creating an assigmnment to show the variables to the user at beginning of the game//
+// creating an assigmnment to show scores/stats to the user at beginning of the game//
 $(".playerscore").text(playerScore);
 $(".wins").text(wins);
 $(".losses").text(losses);
 $(".targetscore").text(targetScore);
 
-// creating an asignment to show the target score in the document //
-
-
 
 //This will be my restart game function//
+//it also contains all the essential pieces to the game//
 function restart() {
 
   targetScore = Math.floor(Math.random() * (121 - 19)) + 19;
@@ -127,4 +127,5 @@ $(".frog").on("click", function() {
     restart();
       
 } 
+});
 });
